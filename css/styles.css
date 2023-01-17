@@ -10,6 +10,32 @@
 	--modal-overlay-color: #2e2f42;
 	--hero-background-color: #2e2f42;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+ul,
+ol {
+	margin: 0;
+	padding-left: 0;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	width: 1158px;
+	padding-left: 15px;
+	padding-right: 15px;
+	outline: 1px solid red;
+	margin: 0 auto;
+}
 
 .visually-hidden {
 	position: absolute;
@@ -61,8 +87,7 @@ body {
 	font-size: 18px;
 	line-height: 1.33;
 	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	display: flex;
+	text-transform: uppercase;;
 }
 
 .header-nav-logo {
@@ -70,6 +95,11 @@ body {
 }
 .header-nav-logo-span {
 	color: var(--primary-brand-color);
+}
+.header-nav-logo{
+	padding-top: 24px;
+	padding-bottom: 24px;
+
 }
 
 .header-container{
@@ -81,12 +111,24 @@ body {
 	align-items: center;
 }
 
+.contacts{
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
+.tell{
+	margin-left: 40px;
+}
+
 .menu {
 	color: var(--dark-color);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
 	display: flex;
+	margin-left: 76px;
+	gap: 40px;
 }
 
 .menu-item:hover,
@@ -114,12 +156,18 @@ body {
 	background-color: var(--dark-color);
 	color: #ffffff;
 }
+
+.main-container{
+	display: flex;
+}
+
 .main-title {
 	font-weight: 700;
 	font-size: 56px;
 	line-height: 1.07;
 	color: #ffffff;
 	letter-spacing: 0.02em;
+	display: block;
 }
 
 .main-btn {
@@ -150,6 +198,10 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+}
+
+.feature-container{
+	display: flex;
 }
 
 /* ----------OUR TEAM-------- */
