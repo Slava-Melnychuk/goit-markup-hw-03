@@ -152,17 +152,26 @@ body {
 	gap: 40px;
 }
 
+.menu-item{
+	display: inline-block;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
 .menu-item:hover,
 .menu-item:focus {
 	color: var(--pressed-state-color);
 }
 
 .contact-item {
+	display: inline-block;
 	color: var(--dark-color);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
+	padding-top: 24px;
+	padding-bottom: 24px;
 }
 
 .contact-item:hover,
@@ -254,7 +263,7 @@ body {
 
 /* ----------What are we doing-------- */
 
-.example-container{
+.example-section{
 	padding-top: 0;
 }
 
@@ -406,8 +415,10 @@ body {
 	width: calc((100% - 48px) / 3);
 }
 
-.card-list{
-	border: 1px solid #E7E9FC;
+.card-text{
+	border-bottom: 1px solid #E7E9FC;
+	border-left: 1px solid #E7E9FC;
+	border-right: 1px solid #E7E9FC;
 }
 
 .card-name {
@@ -421,6 +432,10 @@ body {
 	padding-left: 16px;
 }
 .card-type {
+	color: var(--dark-color);
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.02em;
 	line-height: 1.5;
 	display: block;
 	padding-top: 8px;
