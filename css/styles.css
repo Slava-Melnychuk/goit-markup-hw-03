@@ -10,6 +10,16 @@
 	--modal-overlay-color: #2e2f42;
 	--hero-background-color: #2e2f42;
 }
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 p,
 h1,
 h2,
@@ -33,8 +43,13 @@ img {
 	width: 1158px;
 	padding-left: 15px;
 	padding-right: 15px;
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 	margin: 0 auto;
+}
+
+.section{
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 
 .visually-hidden {
@@ -76,9 +91,14 @@ body {
 	background-color: #ffffff;
 	font-family: "Roboto", sans-serif;
 	color: var(--text-color);
+	margin: 0;
 }
 
 /* ----------HEADER-------- */
+.header{
+	border-bottom: 1px solid #E7E9FC;
+}
+
 .header-nav-logo,
 .header-nav-logo-span {
 	text-decoration: none;
@@ -126,6 +146,7 @@ body {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
+	letter-spacing: 0.02em;
 	display: flex;
 	margin-left: 76px;
 	gap: 40px;
@@ -153,24 +174,37 @@ body {
 /* ----------MAIN-------- */
 
 .main {
+	padding-top: 188px;
+	padding-bottom: 188px;
 	background-color: var(--dark-color);
 	color: #ffffff;
 }
 
-.main-container{
-	display: flex;
+.main{
+	text-align: center;
 }
 
 .main-title {
+	width: 496px;
+	margin: 0 auto 48px;
+
 	font-weight: 700;
 	font-size: 56px;
 	line-height: 1.07;
 	color: #ffffff;
 	letter-spacing: 0.02em;
 	display: block;
+	text-align: center;
+
+;
 }
 
 .main-btn {
+	display: inline-block;
+	min-width: 169px;
+	min-height: 56px;
+	padding: 16px 32px;
+
 	color: #ffffff;
 	background-color: var(--primary-brand-color);
 	font-family: "Roboto", sans-serif;
@@ -178,6 +212,11 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
+
+	cursor: pointer;
+	border: 0;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 }
 
 .btn:hover,
@@ -185,6 +224,15 @@ body {
 	background-color: var(--pressed-state-color);
 }
 /* ----------OUR ADVANTAGES-------- */
+
+.features{
+	display: flex;
+	gap: 24px;
+}
+
+.feature-item{
+	width: calc((100% - 72px) / 4);
+}
 
 .feature-item-title {
 	color: var(--dark-color);
@@ -204,22 +252,62 @@ body {
 	display: flex;
 }
 
+/* ----------What are we doing-------- */
+
+.example-container{
+	padding-top: 0;
+}
+
+.example-title{
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.example-list{
+	display: flex;
+	gap: 24px;
+}
+
+.example-item{
+	width: calc((100% - 48px) / 3);
+}
+
 /* ----------OUR TEAM-------- */
 .team {
 	background-color: var(--light-color);
 }
+
+.team-title{
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.team-list{
+	display: flex;
+	gap: 24px;
+}
+
 .team-card {
 	background-color: #ffffff;
+	width: calc((100% - 72px) / 4);
+	padding-bottom: 32px;
+	box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0 0 4px 4px;
 }
+
 .team-mmbr-name {
 	color: var(--dark-color);
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	text-align: center;
+	padding-top: 32px;
 }
 .team-mmbr-psn {
 	line-height: 1.5;
+	text-align: center;
+	padding-top: 8px;
 }
 
 /* ----------FOOTER-------- */
@@ -229,6 +317,14 @@ body {
 	color: var(--accent-color);
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+}
+.footer-container{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.footer-nav-logo{
+	margin-bottom: 16px;
 }
 
 .footer-nav-logo,
@@ -240,7 +336,7 @@ body {
 	line-height: 1.33;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	display: flex;
+	display: inline-block;
 }
 
 .footer-nav-logo {
@@ -250,18 +346,46 @@ body {
 	color: var(--primary-brand-color);
 }
 
+.footer-text{
+	width: 264px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+
+}
+
 /* ----------PORTFOLIO-------- */
 .main-portfolio {
 	background-color: #ffffff;
 }
 
+.portfolio-container{
+	padding-top: 96px;
+	padding-bottom: 120px;
+}
+
+.filter{
+	display: flex;
+	gap: 24px;
+	justify-content: center;
+	margin-bottom: 72px;
+}
+
 .filter-btn {
+	display: inline-block;
+	padding: 12px 24px;
+	align-items: center;
+	text-align: center;
+
 	font-family: "Roboto", sans-serif;
 	color: var(--primary-brand-color);
 	background-color: var(--light-color);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
+	letter-spacing: 0.04em;
+	border: 1px solid var(--accent-color);
+	border-radius: 4px;
+
 }
 
 .filter-btn:hover,
@@ -270,8 +394,20 @@ body {
 	background-color: var(--pressed-state-color);
 }
 
+.gallery-list{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	row-gap: 48px;
+}
+
 .card {
 	text-decoration: none;
+	width: calc((100% - 48px) / 3);
+}
+
+.card-list{
+	border: 1px solid #E7E9FC;
 }
 
 .card-name {
@@ -280,7 +416,14 @@ body {
 	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: 0.02em;
+	display: block;
+	padding-top: 32px;
+	padding-left: 16px;
 }
 .card-type {
 	line-height: 1.5;
+	display: block;
+	padding-top: 8px;
+	padding-left: 16px;
+	padding-bottom: 32px;
 }
